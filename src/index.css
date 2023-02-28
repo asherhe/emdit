@@ -1,0 +1,15 @@
+html,
+body,
+#root,
+.app,
+.cm-editor {
+  height: 100%;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+}
