@@ -1,34 +1,38 @@
 import { HighlightStyle } from "@codemirror/language";
 import { tags } from "@lezer/highlight";
-import colors from "./colors";
+
+const primary = "#ee6c4f",
+  secondary = "#f1d55c",
+  tertiary = "#71a6e5",
+  gray = "#93a0ab";
 
 const mdHighlighting = HighlightStyle.define([
   {
     tag: tags.heading,
     fontWeight: "800",
-    color: colors.tertiary,
+    color: tertiary,
   },
   {
     tag: tags.strong,
     fontWeight: "bold",
-    color: colors.primary,
+    color: primary,
   },
   {
     tag: tags.emphasis,
     fontStyle: "italic",
-    color: colors.secondary,
+    color: secondary,
   },
   {
     tag: tags.link,
-    color: colors.tertiary,
+    color: tertiary,
   },
   {
     tag: tags.monospace, // code blocks
-    color: colors.secondary,
+    color: secondary,
   },
   {
     tag: tags.quote,
-    color: colors.gray,
+    color: gray,
     fontStyle: "italic",
   },
 ]);

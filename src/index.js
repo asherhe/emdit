@@ -9,7 +9,7 @@ import { syntaxHighlighting } from "@codemirror/language";
 
 import reportWebVitals from "./reportWebVitals";
 
-import "./index.css";
+import "./index.scss";
 import "./fonts.css";
 
 import theme from "./theme";
@@ -43,7 +43,11 @@ class App extends React.Component {
 
   render() {
     this.setTitle();
-    return <div className="app" ref={this.element} />;
+    return (
+      <div className="app">
+        <div className="app" ref={this.element} />
+      </div>
+    );
   }
 
   setTitle() {
@@ -78,7 +82,7 @@ class App extends React.Component {
         gutters(),
 
         highlightActiveLine(),
-        drawSelection(),
+        drawSelection({ cursorBlinkRate: 0 }),
         theme,
 
         history(),
